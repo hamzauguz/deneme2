@@ -1,0 +1,14 @@
+ const hamza = () => {
+      database
+        .collection("Tasks")
+        .get()
+        .then((querySnapshot) => {
+          const docData = [];
+          querySnapshot.forEach((doc) => {
+            docData.push({
+              emailk: doc.data().email,
+            });
+          });
+          setDocData(docData);
+        }, []);
+    };
